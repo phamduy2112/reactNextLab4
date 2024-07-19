@@ -1,113 +1,159 @@
-import Image from "next/image";
 
-export default function Home() {
+import { useEffect, useState } from "react";
+import ListProductFive from "./component/trangChu/listProductFive/page";
+import { getDataProducts } from "./api/fetchApi";
+import ListProductTen from "./component/trangChu/listProductTen/page";
+
+
+export default async function Home() {
+ 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    
+    <div>
+      <div className="w-[100%] mb-[10px]">
+        <img
+          className="w-[100%]"
+          src="https://salt.tikicdn.com/cache/w1240/ts/brickv2og/00/50/1b/3df549cad6a8174202ebef5c4d2c4870.jpg.webp"
+          alt=""
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <section className="box container mt-3 mb-3">
+        <div className="flex justify-between">
+          <div className="box-item flex items-center justify-center gap-2 p-3">
+            <div className="box_circle">
+              <i className="fa fa-truck" aria-hidden="true" />
+            </div>
+            <div className="text-box">
+              <h4>Thanh toán an toàn</h4>
+              <p>Thanh toán an toàn 100%</p>
+            </div>
+          </div>
+          <div className="box-item flex items-center justify-center gap-2">
+            <div className="box_circle">
+              <i className="fa-solid fa-box-archive" />
+            </div>
+            <div className="text-box">
+              <h4>Đổi hàng tận nhà</h4>
+              <p>Trong vòng 7 ngày</p>
+            </div>
+          </div>
+          <div className=" box-item flex items-center justify-center gap-2">
+            <div className="box_circle">
+              <i className="fa-solid fa-money-bill" />
+            </div>
+            <div className="text-box">
+              <h4>Thanh toán COD</h4>
+              <p>Yên tâm mua sắm</p>
+            </div>
+          </div>
+          <div className="box-item flex items-center justify-center gap-2">
+            <div className="box_circle">
+              <i className="fa-solid fa-phone-volume" />
+            </div>
+            <div className="text-box">
+              <h4>Hotline: 028.73066.060</h4>
+              <p>Hỗ trợ bạn từ 8h30-22h00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="container">
+        <div className="flex justify-between mt-3">
+          <div className="w-[33%]">
+            <img
+              width="100%"
+              src="https://file.hstatic.net/1000360022/file/icon105_19cd8f4143364de09302a6c57ecb4c14_grande.png"
+              alt=""
+            />
+          </div>
+          <div className="w-[33%]">
+            <img
+              width="100%"
+              src="https://file.hstatic.net/1000360022/file/3_1_0cc7f1a0f156447da13dc91f4f922241_grande.png"
+              alt=""
+            />
+          </div>
+          <div className="w-[33%]">
+            <img
+              width="100%"
+              src="https://file.hstatic.net/1000360022/file/4_1_b17903579a8949c9b3a7013c10924fae_grande.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section className="container ">
+        <div className="section_coupons mt-3">
+          <div className="flex">
+            <div className="img-coupon w-[20%]">
+              <div className="coupon_item w-100">
+                <div className="tron_container">
+                  <p className="tron" />
+                  <p className="tron" />
+                  <p className="tron" />
+                  <p className="tron" />
+                  <p className="tron" />
+                </div>
+                <div className="tron_container1">
+                  <p className="tron1" />
+                  <p className="tron1" />
+                  <p className="tron1" />
+                  <p className="tron1" />
+                  <p className="tron1" />
+                </div>
+                <div className="coupon_body">
+                  <div className="coupon_head flex justify-between">
+                    <h3 className="coupon_title">VOUCHER</h3>
+                    <div className="coupon_desc">đơn từ 699K</div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    fontSize: 30,
+                    display: "flex",
+                    alignItems: "baseline",
+                  }}
+                >
+                  <h1 className="coupon_h1">50,000 </h1>
+                  <p className="coupon_vnd">VND</p>
+                </div>
+                <div className="coupon_footer">
+                  <span className="coupon_ma"> mã: W50</span>
+                  <button
+                    className="btn btn-main btn-sm coupon_copy"
+                    data-ega-coupon="W50"
+                  >
+                    <span className="btn btn-primary-two px-2 py-1">Sao chép</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div>
+        <ListProductFive></ListProductFive>
+        <section className="banner-box container justify-content-between mt-2">
+          <div className="banner-item">
+            <img
+              src="https://theme.hstatic.net/200000163831/1000713867/14/slider_2.jpg?v=161"
+              width="100%"
+              alt=""
+            />
+          </div>
+        </section>
       </div>
-    </main>
+
+      {/* san pham */}
+      <div className="container">
+        <div className="product-top h-[35px] mt-3 flex items-center px-3" style={{background:"white"}}>
+          <p>Những sản phẩm khác</p>
+        </div>
+        <div >
+         
+     <ListProductTen/>
+        </div>
+      </div>
+    </div>
   );
 }

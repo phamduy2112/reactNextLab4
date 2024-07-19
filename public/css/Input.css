@@ -1,0 +1,17 @@
+form .group-form__one {
+    margin-bottom: 10px;
+}
+form .group-form__one label{
+    display: inline-block;
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+form .group-form__one .form-input{
+    width: 100%;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    outline: none;
+}

@@ -1,0 +1,90 @@
+.sign{
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    width: 500px;
+
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px 25px;
+}
+.sign h3{
+    font-size: 25px;
+    font-weight: 700;
+}
+.sign .form-label{
+    display: inline-block;
+    /* width: 100%; */
+    font-weight: 400;
+}
+.sign a{
+    color:#42A4EC
+}
+.sign .btn-primary{
+    background-color: #012979;
+    border: 1px solid #001F5D;
+   font-size: 17px;
+   color: white;
+   width: 100%;
+}
+.sign .form-check-label{
+    margin-left: 7px;
+   
+}
+.sign .btn-primary:hover{
+    background-color: #031e53;
+   
+}
+.sign .form-input{
+    width: 100%;
+    outline: none;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    padding: 0 25px;
+}
+.sign .google{
+    background-color: orangered;
+    color: white;
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+.sign .facebook{
+    background-color: #0095ff;
+    color: white;
+    border: 1px solid #0095ff;
+    cursor: pointer;
+}
+.sign form .forget{
+    font-weight: 600;
+    color: #001F5D;
+}
+.button-dangnhap div{
+    width: 45%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    
+}
+.sign .or {
+position: relative;
+}
+.sign .or::after {
+content: "";
+position: absolute;
+top: 55%;
+right: 0%;
+width: 44%;
+height: 1px;
+background-color: #d6d6d6;
+display: inline-block;
+}
+.sign .or::before {
+content: "";
+position: absolute;
+top: 55%;
+left: 0%;
+width: 44%;
+height: 1px;
+background-color: #d6d6d6;
+display: inline-block;
+}

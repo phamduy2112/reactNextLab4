@@ -2,32 +2,319 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html{
+   /* font-size: 62.5%;  */
+   margin: 0;
+   padding: 0;
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f5f9fe;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btn-primary {
+  background-color: white;
+  border: 1px solid #001F5D;
+  color: #001F5D;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.gioiThieu .image {
+  height: 460.286px;
+  /* transform: translate3d(0px, -124.57px, 0px); */
+  backface-visibility: hidden;
+  background-image: url(https://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/banner-portfolio.jpg);
+  background-position: bottom center;
+}
+
+.box .box-item {
+  /* border: 1px solid black; */
+  line-height: 100%;
+  /* padding: 10px 0 0; */
+  width: 24.5%;
+  background-color: white;
+  /* padding-top: 15px; */
+  height: 75px
+}
+
+.box .box-item i {
+  font-size: 25px;
+  color: #001F5D;
+  line-height: 40px;
+
+}
+
+.box_circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #001F5D;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  border-radius: 50%;
+}
+
+.sp-hot {
+  background-color: #001F5D;
+  padding: 1rem;
+
+}
+
+.box .box-item .text-box h4 {
+  font-size: 18px;
+  /* line-height: 0; */
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #001F5D;
+  font-weight: 600;
+}
+
+.box .box-item .text-box p {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.title {
+  width: 100%;
+  height: 35px;
+  /* border: 1px solid black;   */
+  background-color: white;
+  padding: 0 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.title p {
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
+.title a {
+  line-height: 30px;
+}
+
+.card a {
+  color: black;
+}
+
+.card .card-body {
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 17px;
+  color: red;
+}
+
+.banner-item {
+  width: 100%;
+  background-color: black;
+
+}
+
+/* giảm giá */
+
+.section_coupons {
+  padding: 0;
+}
+
+.coupon_item {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 5px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.coupon_item .coupon_body {}
+
+.tron_container {
+  position: absolute;
+  top: 4px;
+  left: -5px;
+}
+
+.tron {
+  border-radius: 999px;
+  background: white;
+  border: 1px solid white;
+  width: 25px;
+  height: 20px;
+  margin-bottom: 0.7px;
+  z-index: 11;
+}
+
+.tron_container1 {
+  position: absolute;
+  top: 4px;
+  right: -5px;
+}
+
+.tron1 {
+  border-radius: 999px;
+  background: white;
+  border: 1px solid white;
+  width: 25px;
+  height: 20px;
+  margin-bottom: 0.7px;
+  z-index: 11;
+}
+
+.coupon_item .coupon_body .coupon_title {
+  font-size: 17px;
+  color: #001F5D;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.coupon_desc {
+  color: #001F5D;
+}
+
+.coupon_h1 {
+  margin-bottom: 0;
+  font-size: 25px;
+  color: #001F5D;
+  font-weight: 900;
+}
+
+.coupon_vnd {
+  margin-bottom: 0;
+  color: #001F5D;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.coupon_footer {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon_ma {
+  font-size: 16px;
+  font-weight: 500;
+  color: #001F5D;
+}
+
+.box-noiveCT {
+  height: 420px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.footer-top{
+  background-color: #001F5D;
+  width: 100%;
+  height: 250px;
+}
+
+.footer-item{
+  color: white;
+padding: 2rem 0;
+width: 25%;
+}
+.footer-item h3{
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+}
+.footer-item h3::after{
+  content:'';
+  width: 80px;
+  height: 3px;
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  display: inline-block;
+  border: 1px solid white;
+  background-color: white;
+}
+.footer-item a{
+  color: white;
+  display: block;
+  font-size: 17px;
+}
+.footer-item form{
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.footer-item form input{
+  width: 80%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+.footer-item form button{
+  width: 21%;
+  height: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.footer-bottom>div{
+  height: 35px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  */
+/* Sai chung */
+
+
+.btn-primary-one{
+  background-color: white;
+  color:#001F5D;
+  border: 1px solid #001F5D;
+  transition: all .5s;
+  
+}
+.banDau{
+  text-decoration: line-through;
+  color: black;
+  font-size: 15px;
+}
+.btn-primary-one:hover{
+  background-color: #001F5D;
+  color: white;
+}
+td.text-primary-one{
+  color: #001F5D;
+  font-weight: 600;
+}
+.btn-primary-two{
+  background-color:#001F5D ;
+
+color: white;
+}
+.btn-primary-two:hover{
+  border: 1px solid #001F5D;
+}
+
+.btn-white{
+  background-color: white;
+  color: #001F5D;
+}
+.btn-white:hover{
+  background-color: whitesmoke;
+  
+}
+ .image-product{
+  overflow: hidden;
+  height: 275px;
+}
+ .image-product img{
+  width: 100%;height: 100%;
 }

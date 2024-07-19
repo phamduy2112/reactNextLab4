@@ -1,0 +1,58 @@
+
+.cart-chitiet__box .cart-chitiet__left{
+    width: 73%;
+    background-color: white;
+    /* border: 1px solid black; */
+    padding: 10px 3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 300px;
+}
+.cart-chitiet__box .cart-chitiet__left h3{
+    font-size: 23px;
+}
+.cart-chitiet__box .cart-chitiet__right{
+    width: 25%;
+    background-color: white;
+    padding: 10px 2rem;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    height: 100%;
+}
+
+#cart-ct-right .cart-chitiet__product{
+    /* border: 1px solid black; */
+    position: relative;
+  margin-bottom: 12px;
+}
+#cart-ct-right .cart-chitiet__product:not(:first-child){
+    /* border: 1px solid black; */
+    position: relative;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+.cart-chitiet__product::after{
+    /* border: 1px solid black; */
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d6d6d6;
+
+}
+.cart-chitiet__thanhtoan>.group-form__radio{
+    margin-left: 30px;
+}
+.cart-chitiet__box .cart-chitiet__right h3{
+font-size: 23px;
+width: 100%;
+}
+.cart-chitiet__right .cart-chitiet__box img{
+    width: 70px;
+}
+.cart-chitiet__right .cart-chitiet__tong div {
+    font-size: 17px;
+}

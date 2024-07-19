@@ -1,0 +1,61 @@
+
+.table{
+   
+    border: 1px solid #001F5D;
+    /* display: inline-block; */
+    width: 100%;
+
+}
+.cart .table>:not(caption)>*>*{
+    background-color: transparent;
+
+}
+.table thead{
+    background-color: #001F5D;
+    padding: 5px 0;
+    
+}
+table tbody tr:nth-child(odd){
+    background-color: white;
+}
+table tbody tr:nth-child(even){
+    background-color: #8acaf827;
+}
+.table .product-cart {
+    width: 100%;
+}
+.table .product-cart img{
+    width: 60px;
+}
+.table .product-cart .product-cart__text {
+    width: 100%;
+   
+}
+.table .product-cart .product-cart__text h6{
+    font-size: 16px;
+}
+tbody tr{
+    padding: 0 20px;
+}
+.cart-right {
+   
+}
+tbody td .soLuong{
+    padding: 0 4rem;
+}
+.cart-right .bg-white{
+    padding: 10px 2rem;
+    height: 230px;
+    /* border: 1px solid black;  */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cart-right p{
+    margin-bottom: 0;
+}
+.cart-right .btn-info{
+    background-color: #001F5D;
+    border: 1px solid #001F5D;
+    color: white;
+}

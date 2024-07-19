@@ -1,0 +1,96 @@
+.information {
+    width: 1400px;
+    background-color: white;
+    padding: 40px;
+    margin: auto;
+  }
+  .information .information-box {
+    display: flex;
+    gap: 20px;
+  }
+  .information .information-box__left {
+    /* width: 25%; */
+    border: 1px solid rgba(0, 0, 0, 0.099);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    height: 210px;
+  }
+  .information .information-box .information-box__top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.099);
+    padding: 10px 20px;
+  }
+  .information .information-box .information-box__top .information_item h3 {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+  .information .information-box .information-box__top .information_item p{
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+  .information .information-box .information-box__top img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .information .information-box .information-box__bottom ul {
+    padding-left: 0;
+  }
+  .information .information-box .information-box__bottom ul li {
+    padding: 5px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.099);
+  }
+  .information .information-box .information-box__bottom ul li.active{
+    background-color: #001F5D;
+      color: white;
+    
+  }
+  .information .information-box .information-box__bottom ul li.active a{
+  
+  }
+  
+  .information .information-box .information-box__bottom ul li a {
+    color: black;
+  }
+  .information .information-box__right {
+    border: 1px solid rgba(0, 0, 0, 0.099);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    width: 75%;
+    padding: 10px 100px;
+  }
+  .information .information-box__right .information-title {
+    text-align: center;
+  }
+  .information .information-box__right .information-title h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .information .information-box__right .information-item {
+    margin-top: 10px;
+  }
+  .information .information-box__right .information-item h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .information .information-box__right .information-item p {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+    color: #00b4d8;
+    cursor: pointer;
+  }
+  .information .information-box__right .information-item .form-button {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+  }
+  .information .information-box__right .information-item .form-button p {
+    border: 1px solid rgba(0, 0, 0, 0.099);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
